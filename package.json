@@ -14,9 +14,9 @@
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "4.17.3",
-    "nodemon": "2.0.15"
+    "nodemon": "2.0.15",
+    "pug": "^3.0.3"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "bu birirchi loyihamiz"
