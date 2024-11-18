@@ -19,19 +19,18 @@ app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// 2 Session code (хозирча бизни мисолимизда йук)
+// 2 Session code
 // 3 Views code
 app.set("views", "views");
 app.set("view engine", "ejs");
 
 // 4 Routing code
 app.post("/create-item",(req, res) => {
-    console.log(req.body);
-    res.json({test: "success" });
+    // TODO: code with db here
 });
 
 app.get('/author', (rec, res) => {
- res.render("author", );
+ res.render("author", {user, user });
 })
 
 app.get("/", function (req, res) {
