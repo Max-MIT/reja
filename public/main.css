@@ -1,0 +1,134 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    width: 1200px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 300px;
+    background: #f7f7f7;
+    padding: 20px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile img {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 156.16px;
+    height: 142.53px;
+    /* border-radius: 50%; */
+    margin-bottom: 29.46px;
+}
+
+.profile h2 {
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.details h3, .languages h3, .skills h3, .extra-skills h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+.languages p, .skills p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.extra-skills ul {
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+}
+
+.extra-skills ul li {
+    margin-bottom: 5px;
+}
+
+.download-cv {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff8c00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 40px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.intro h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.hire-me {
+    padding: 10px 20px;
+    background: #ff8c00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service {
+    background: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.service h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 14px;
+    color: #666;
+}
