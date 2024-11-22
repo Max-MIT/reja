@@ -1,36 +1,36 @@
-console. log("Jack Ma maslahatlari"); 
-const list = [
-"yahshi talaba boling", // 0-20 
-"togri boshliq tanlang va koprog hato qiling", // 20-30 
-"uzingizga ishlashingizni boshlang", // 30-40 
-"siz kuchli bolgan narsalarni qiling", // 40-50
-"yoshlarga investitsiya qiling", // 50-66 
-"endi dam oling, foydasi yoq endi", // 60
-];
+// console. log("Jack Ma maslahatlari"); 
+// const list = [
+// "yahshi talaba boling", // 0-20 
+// "togri boshliq tanlang va koprog hato qiling", // 20-30 
+// "uzingizga ishlashingizni boshlang", // 30-40 
+// "siz kuchli bolgan narsalarni qiling", // 40-50
+// "yoshlarga investitsiya qiling", // 50-66 
+// "endi dam oling, foydasi yoq endi", // 60
+// ];
 
-// CALLBACK FUNCTION
-function maslahatBering(a, callback) {
- if (typeof a !== "number") callback("insert a number", null);
- else if (a <= 20) callback(null, list[0]);
- else if (a > 20 && a <= 30) callback(null, list[1]);
- else if (a > 30 && a <= 40) callback(null, list[2]); 
- else if (a > 40 && a <= 50) callback(null, list[3]);
- else if (a > 50 && a <= 60) callback(null, list[4]);
- else {
-    setInterval(function () { 
-     callback(null, list[5]);    
-    }, 1000);
-}
-}
+// // CALLBACK FUNCTION
+// function maslahatBering(a, callback) {
+//  if (typeof a !== "number") callback("insert a number", null);
+//  else if (a <= 20) callback(null, list[0]);
+//  else if (a > 20 && a <= 30) callback(null, list[1]);
+//  else if (a > 30 && a <= 40) callback(null, list[2]); 
+//  else if (a > 40 && a <= 50) callback(null, list[3]);
+//  else if (a > 50 && a <= 60) callback(null, list[4]);
+//  else {
+//     setInterval(function () { 
+//      callback(null, list[5]);    
+//     }, 1000);
+// }
+// }
 
-console.log("passed here 0");
-maslahatBering(70, (err, data) => {
-   if (err) console.log("ERROR:", err);
-    else{
-console.log(data);
-    }
-});
-console.log("passed here 1");
+// console.log("passed here 0");
+// maslahatBering(70, (err, data) => {
+//    if (err) console.log("ERROR:", err);
+//     else{
+// console.log(data);
+//     }
+// });
+// console.log("passed here 1");
 
 // ASYNC fonction 
 // async function maslahatBering(a) { 
@@ -74,34 +74,54 @@ console.log("passed here 1");
 // console.log("passed here 1");
 
 // call via asyn/await
-async function run() {
-    let javob = await maslahatBering(20);
-    console.log(javob);
-    javob = await maslahatBering(31);
-    console.log(javob);
-    javob = await maslahatBering(41);
-    console.log(javob);
-}
-run();
+// async function run() {
+//     let javob = await maslahatBering(20);
+//     console.log(javob);
+//     javob = await maslahatBering(31);
+//     console.log(javob);
+//     javob = await maslahatBering(41);
+//     console.log(javob);
+// }
+// run();
 
 
-function countLetter(letter, word) {
-    return word.split("").reduce((count, char) => {
-      return char === letter ? count + 1 : count;
-    }, 0);
-  }
+// function countLetter(letter, word) {
+//     return word.split("").reduce((count, char) => {
+//       return char === letter ? count + 1 : count;
+//     }, 0);
+//   }
   
-  function countLetter(letter, word) {
-    let count = 0;
-    for (let i = 0; i < word.length; i++) {
-      if (word[i] === letter) {
-        count++;
-      }
+//   function countLetter(letter, word) {
+//     let count = 0;
+//     for (let i = 0; i < word.length; i++) {
+//       if (word[i] === letter) {
+//         count++;
+//       }
+//     }
+//     return count;
+//   }
+  
+//   let result = countLetter("e", "engineer"); // 3
+//   console.log(result);
+//   result = countLetter("o", "Hello world"); // 2
+//   console.log(result);
+
+// DEFINE
+function qoldiqBolish(a, b, callback) {
+    if (a === 0) {
+      callback("Mahraj nolga teng bolmasin!", null);
+    } else {
+      const c = a % b;
+      callback(null, c);
     }
-    return count;
   }
   
-  let result = countLetter("e", "engineer"); // 3
-  console.log(result);
-  result = countLetter("o", "Hello world"); // 2
-  console.log(result);
+  // CALL
+  qoldiqBolish(7, 3, (err, data) => {
+    if (err) {
+      console.log("ERROR:", err);
+    } else {
+      console.log("data:", data);
+      console.log("ANY LOGIC");
+    }
+  });
