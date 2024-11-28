@@ -107,21 +107,60 @@
 //   console.log(result);
 
 // DEFINE
-function qoldiqBolish(a, b, callback) {
-    if (a === 0) {
-      callback("Mahraj nolga teng bolmasin!", null);
-    } else {
-      const c = a % b;
-      callback(null, c);
-    }
-  }
+// function qoldiqBolish(a, b, callback) {
+//     if (a === 0) {
+//       callback("Mahraj nolga teng bolmasin!", null);
+//     } else {
+//       const c = a % b;
+//       callback(null, c);
+//     }
+//   }
   
   // CALL
-  qoldiqBolish(7, 3, (err, data) => {
-    if (err) {
-      console.log("ERROR:", err);
-    } else {
-      console.log("data:", data);
-      console.log("ANY LOGIC");
-    }
-  });
+  // qoldiqBolish(7, 3, (err, data) => {
+  //   if (err) {
+  //     console.log("ERROR:", err);
+  //   } else {
+  //     console.log("data:", data);
+  //     console.log("ANY LOGIC");
+  //   }
+  // });
+// Функция для подсчёта цифр в строке
+// function countDigits(s) {
+//   let count = 0; // Переменная для подсчёта цифр
+//   for (let char of s) { // Перебираем каждый символ строки
+//       if (!isNaN(char) && char.trim() !== '') { // Проверяем, является ли символ цифрой
+//           count++;
+//       }
+//   }
+//   return count; // Возвращаем количество цифр
+// }
+  // Новый маршрут для подсчёта цифр
+// app.get("/count-digits", (req, res) => {
+//   const inputString = req.query.input || ""; // Получаем строку из параметра запроса
+//   console.log(`Полученная строка: "${inputString}"`); // Лог строки
+//   const digitCount = countDigits(inputString); // Считаем количество цифр
+//   console.log(`Количество цифр: ${digitCount}`); // Лог результата
+//   res.send(`Количество цифр в строке "${inputString}": ${digitCount}`);
+// });
+
+/*****************************************************************/
+/*
+C-TASK: 
+
+Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
+*/
+
+// Жавоб:
+function checkContent(string1, string2) {
+  
+  const sortedString1 = string1.split('').sort().join('');
+  const sortedString2 = string2.split('').sort().join('');
+  
+  return sortedString1 === sortedString2;
+}
+
+console.log(checkContent("mitgroup", "gmtiprou")); 
+console.log(checkContent("максуд", "дускам"));     
+

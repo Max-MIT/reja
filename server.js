@@ -1,13 +1,12 @@
 const http = require("http");
-
 const mongodb = require("mongodb");
 
 let db;
 const connectionString =
- "mongodb+srv://maksudbek:Wellness1985@cluster0.hnxci.mongodb.net/Reja?retryWrites=true&w=majority&appName=Cluster0"; 
+"mongodb+srv://maksudbek:Wellness1985@cluster0.hnxci.mongodb.net/Reja?"
 
 mongodb.connect(
-    connectionString, 
+    connectionString,
     {
     useNewUrlParser: true,
      useUnifiedTopology: true,
@@ -26,6 +25,7 @@ mongodb.connect(
                 `The server is running successfully on port: ${PORT}, http://localhost:${PORT}`
               );
             }); 
-        }
-    });
+          }
+       }
+    );
 
