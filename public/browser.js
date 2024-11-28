@@ -39,17 +39,16 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
 });
 
 document.addEventListener("click", function (e) {
- // delet oper
+ // deletе oper
  console.log(e.target);
  if(e.target.classList.contains("delete-me")) {
     if (confirm("Aniq ochirmoqchimisiz?")) {  
-    axios.post
-    ("/delete-item", { id: e.target.getAttribute("data-id") })
-    .then(respose) => {
+  axios.post("/delete-item", { id: e.target.getAttribute("data-id") })
+    .then((respose) => {
       console.log(respose.data);
       e.target.parentElement.parentElement.remove(); 
     })
-    .catch(err) => {
+    .catch((err) => {
         console.log("Iltimos qaytadan harakat qiling!");
     });
     }
