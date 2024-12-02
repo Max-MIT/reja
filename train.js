@@ -154,40 +154,52 @@ MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 
 
 // D-TASK:
-class Shop {
-    constructor(non, lagmon, cola) {
-      this.products = { non, lagmon, cola };
-    }
+// class Shop {
+//     constructor(non, lagmon, cola) {
+//       this.products = { non, lagmon, cola };
+//     }
   
-    log(message) {
-      const now = new Date();
-      const time = now.toLocaleTimeString("ru-RU");
-      return `Сейчас ${time}: ${message}`;
-    }
+//     log(message) {
+//       const now = new Date();
+//       const time = now.toLocaleTimeString("ru-RU");
+//       return `Сейчас ${time}: ${message}`;
+//     }
   
-    qoldiq() {
-      const { non, lagmon, cola } = this.products;
-      console.log(this.log(`${non} хлебов, ${lagmon} лагманов и ${cola} бутылок колы доступно.`));
-    }
+//     qoldiq() {
+//       const { non, lagmon, cola } = this.products;
+//       console.log(this.log(`${non} хлебов, ${lagmon} лагманов и ${cola} бутылок колы доступно.`));
+//     }
   
-    sotish(product, quantity) {
-      if (this.products[product] >= quantity) {
-        this.products[product] -= quantity;
-        console.log(this.log(`${quantity} ${product} продано.`));
-      } else {
-        console.log(this.log(`Недостаточно ${product} для продажи.`));
-      }
-    }
+//     sotish(product, quantity) {
+//       if (this.products[product] >= quantity) {
+//         this.products[product] -= quantity;
+//         console.log(this.log(`${quantity} ${product} продано.`));
+//       } else {
+//         console.log(this.log(`Недостаточно ${product} для продажи.`));
+//       }
+//     }
   
-    qabul(product, quantity) {
-      this.products[product] += quantity;
-      console.log(this.log(`${quantity} ${product} принято.`));
-    }
-  }
+//     qabul(product, quantity) {
+//       this.products[product] += quantity;
+//       console.log(this.log(`${quantity} ${product} принято.`));
+//     }
+//   }
   
-  const shop = new Shop(4, 5, 2);
-  shop.qoldiq();
-  shop.sotish("non", 3);
-  shop.qabul("cola", 4);
-  shop.qoldiq();
-  
+//   const shop = new Shop(4, 5, 2);
+//   shop.qoldiq();
+//   shop.sotish("non", 3);
+//   shop.qabul("cola", 4);
+//   shop.qoldiq();
+
+
+// E-TASK: 
+// Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+// MASALAN: getReverse("hello") return qilsin "olleh"
+function getReverse(str) {
+    return str.split('').reverse().join('');
+}
+// Примеры использования:
+console.log(getReverse("hello"));  // Выведет: "olleh"
+console.log(getReverse("world"));  // Выведет: "dlrow"
+console.log(getReverse("JavaScript"));  // Выведет: "tpircSavaJ"
+ 
