@@ -192,14 +192,35 @@ MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 //   shop.qoldiq();
 
 
-// E-TASK: 
-// Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
-// MASALAN: getReverse("hello") return qilsin "olleh"
-function getReverse(str) {
-    return str.split('').reverse().join('');
-}
-// Примеры использования:
-console.log(getReverse("hello"));  // Выведет: "olleh"
-console.log(getReverse("world"));  // Выведет: "dlrow"
-console.log(getReverse("JavaScript"));  // Выведет: "tpircSavaJ"
+// // E-TASK: 
+// // Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+// // MASALAN: getReverse("hello") return qilsin "olleh"
+// function getReverse(str) {
+//     return str.split('').reverse().join('');
+// }
+// // Примеры использования:
+// console.log(getReverse("hello"));  // Выведет: "olleh"
+// console.log(getReverse("world"));  // Выведет: "dlrow"
+// console.log(getReverse("JavaScript"));  // Выведет: "tpircSavaJ"
  
+// F-TASK: 
+function findDoublers(str) {
+  // Harflarni saqlash uchun to'plam
+  const seen = new Set();
+
+  // Har bir belgi ustida ishlaymiz
+  for (let char of str) {
+    if (seen.has(char)) {
+      return true; // Agar belgi allaqachon mavjud bo'lsa, true qaytaramiz
+    }
+    seen.add(char); // Belgini to'plamga qo'shamiz
+  }
+
+  return false; // Agar hech qanday takrorlangan belgi topilmasa, false qaytaramiz
+}
+
+// Misollar
+console.log(findDoublers("hello")); // true (l bir necha marta qatnashgan)
+console.log(findDoublers("world")); // false (hamma harflar noyob)
+console.log(findDoublers("abcde")); // false (hamma harflar noyob)
+console.log(findDoublers("aabbcc")); // true (a, b, va c takrorlangan)
